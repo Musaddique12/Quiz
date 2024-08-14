@@ -1,0 +1,638 @@
+/* Basic styles for the application */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+/* Titles and text */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Features Component */
+.features {
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-item {
+  flex: 1 1 300px;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #f39c12;
+}
+
+/* Footer Component */
+.footer {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+/* Hero Component */
+.hero {
+  background: url('https://t4.ftcdn.net/jpg/02/30/37/93/360_F_230379361_GdzubTAT5hxPTuNMMQq5TkLYNKM6WoCc.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Testimonials Component */
+.testimonials {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.testimonial-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* Signup Component */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#loginContainer {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputContainer {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+#loginButton, #signupButton {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#loginButton:hover, #signupButton:hover {
+  background-color: #2980b9;
+}
+
+/* Navbar Component */
+.navbar {
+  padding: 1rem;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+}
+
+/* Profile Component */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-color: #3498db;
+  color: white;
+  text-transform: capitalize;
+}
+
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  position: relative;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-pic input {
+  display: none;
+}
+
+.profile-pic label {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-pic label:hover {
+  background-color: #2980b9;
+}
+
+.profile-info h2 {
+  margin: 0.5rem 0;
+  color: saddlebrown;
+}
+
+.profile-info p {
+  margin: 0.5rem 0;
+  color: #777;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.stat {
+  text-align: center;
+  color: blue;
+}
+
+.stat p {
+  margin: 0.5rem 0;
+}
+
+.progress-section {
+  margin: 1rem 0;
+  color: #0000008c;
+}
+
+.settings-button, .leaderboard-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.settings-button:hover, .leaderboard-button:hover {
+  background-color: #2980b9;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.leaderboard-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+  max-width: 100%;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 12px 12px 0 0;
+  max-width: 97%;
+}
+
+.leaderboard-header span {
+  text-align: center;
+  width: 40%;
+}
+
+.your-rank {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.your-rank h3 {
+  color: #3498db;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.leaderboard-row:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.leaderboard-row:hover {
+  background-color: #e9e9e9;
+}
+
+.leaderboard-row.highlight {
+  background-color: #d1e7ff;
+}
+
+.leaderboard-rank,
+.leaderboard-name,
+.leaderboard-star {
+  flex: 1;
+  text-align: center;
+}
+
+.leaderboard-rank {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.leaderboard-name {
+  color: #333;
+}
+
+.leaderboard-star {
+  color: #e67e22;
+}
+
+/* Quiz.js */
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  
+}
+
+.quiz-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.question-block {
+  margin-bottom: 1rem;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  padding: 0.5rem;
+  margin: 0.8rem 0;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.option:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+.selected {
+  background-color: #3498db;
+  color: white;
+}
+
+.next-button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.next-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* QuizCard Component */
+.quiz-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card-content1 {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+
+.card-content1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.quiz-gif {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.start-button {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.start-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Default styles for Quiz Setup Component */
+.quiz-setup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+.quiz-setup-title {
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+  text-align: center;
+}
+
+/* Category and Difficulty cards */
+.categories-section, .difficulties-section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.categories-container, .difficulties-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.category-card, .difficulty-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  width: calc(20% - 1rem); /* 5 items per row with space between */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-card:hover, .difficulty-card:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);
+}
+
+.category-card.selected, .difficulty-card.selected {
+  background-color: #3498db; /* Keep the selected state blue */
+  color: white;
+}
+
+.category-name, .difficulty-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Quiz Setup Button */
+.quiz-setup-button {
+  padding: 0.75rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.quiz-setup-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .categories-container, .difficulties-container {
+    gap: 0.5rem;
+  }
+
+  .category-card, .difficulty-card {
+    width: calc(33.33% - 0.5rem); /* 3 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-container, .difficulties-container {
+    gap: 0.5rem;
+  }
+
+  .category-card, .difficulty-card {
+    width: calc(50% - 0.5rem); /* 2 items per row */
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+
+/* Applying Animations */
+.feature-item {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.testimonial-item {
+  animation: slideInRight 1s ease-in-out;
+}
+
+.start-button, .next-button {
+  animation: bounce 1s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card, .quiz-container, .quiz-setup-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  .feature-item, .testimonial-item, .option {
+    padding: 0.5rem;
+    margin: 0.8rem;
+    flex: 0 0 100%;
+  }
+
+  .card-content1 {
+    display: block;
+  }
+
+  .profile-container {
+    height: fit-content;
+    padding: 2rem;
+  }
+
+  .settings-button, .leaderboard-button, .start-button {
+    padding: 0.5rem;
+  }
+}
