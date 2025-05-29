@@ -13,7 +13,7 @@ function App() {
   const myRouter=createBrowserRouter([
       {path:'/',Component:Welcome},
       {path:'/login',Component:Login},
-      {path:'singup',Component:Singup},
+      {path:'/signup',Component:Singup},
       {path:'/profile',Component:Profile},
       {path:'/quiz',Component:Quiz},
       {path:'/category',Component:QuizSetup}

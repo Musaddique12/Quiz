@@ -83,12 +83,17 @@ const Quiz = () => {
 
 
    const AddData = async () => {
+    if (fetched_data.length === 0 || !fetched_data[0]) {
+        alert('User data not loaded yet. Please try again.');
+        return;
+    }
     if (correctAnswerCount === 10) {
         fetched_data[0].star = (fetched_data[0].star || 0) + 3;
     } else if (correctAnswerCount >= 6) {
         fetched_data[0].star = (fetched_data[0].star || 0) + 2;
     } else if (correctAnswerCount >= 4) {
         fetched_data[0].star = (fetched_data[0].star || 0) + 1;
+        console.log(fetched_data[0].star = (fetched_data[0].star || 0) + 1)
     }
 
     let newLevel = fetched_data[0].level || 'Beginner';
@@ -96,7 +101,7 @@ const Quiz = () => {
 
     if (fetched_data[0].star >= 200) {
         newLevel = 'Grandmaster';
-        newStarForNextLevel = 200; // Grandmaster level threshold
+        newStarForNextLevel = 500; // Grandmaster level threshold
     } else if (fetched_data[0].star >= 150) {
         newLevel = 'Master';
         newStarForNextLevel = 200;
